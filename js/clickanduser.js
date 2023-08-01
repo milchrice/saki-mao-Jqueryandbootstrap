@@ -1,19 +1,3 @@
-// pop up
-const clickBtn = document.getElementById('pin');
-const popupWrapper = document.getElementById('popup-wrapper');
-const close = document.getElementById('close');
-
-clickBtn.addEventListener('click', () => {
-  popupWrapper.style.display = "block";
-});
-
-popupWrapper.addEventListener('click', e => {
-  if (e.target.id === popupWrapper.id || e.target.id === close.id) {
-    popupWrapper.style.display = 'none';
-  }
-});
-  
-
 // user input&output
 function cafe() {
   let greeting = "Hello!";
