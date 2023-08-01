@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <a href="index.html"><img class="logo" src="imgs/js.png"></a>
+                <ul class="nav">
+                    <li><a href="parallax2.html">Parallax</a></li>
+                    <li><a href="timer.html">Timer / Stopwatch</a></li>
+                    <li><a href="map.html">Map Points</a></li>
+                </ul>
+            </div>
+            <div class="respnav">
+                <a href="#"><img class="hamburger" id="btnMenu" src="img/banner.jpg"></a>
+            </div>
+            <ul class="resp">
+                <li><a href="#">Feature 1</a></li>
+                <li><a href="#">Feature 2</a></li>
+                <li><a href="#">Feature 3</a></li>
+            </ul>
+        </nav>
+        <div>
+            <img class="top-img" id="changePic" src="imgs/cafe1.jpg" alt="View of Tokyo.">
+        </div>
+        <div class="title">
+            <h1>Cafe map</h1>
+            <h2>This is my favourite café location.</h2>
+            <h3>Explore Vancouver!</h3>
+        </div>
+        <div>
+            <p id="counter"></p>
+        </div>  
+        <!-- ボタン -->
+        <div class="container">
+            <img id="map" src="imgs/Vancouver-map.gif">
+            <div>
+                <span class="pin" id="pin1">A</span>
+                <div class="popup-wrapper" id="popup-wrapper1">
+                    <div id="popup-inside">
+                        <div id="close">x</div>
+                        <div id="message">
+                            <h3>Coffee Cafe</h3>
+                            <p>This is my favorite coffee cafe</p>
+                            <p>Open hour 11:00~19:00</p>
+                            <div id="carousel1">
+                                <button class="pre-btn" id="prev1"></button>
+                                <img class="main-pic" id="main-pic1" src="imgs/01.jpg" alt="Image 1">
+                                <button class="next-btn" id="next1"></button>
+                                <p id="photo1"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="pin" id="pin2">B</span>
+                <div class="popup-wrapper" id="popup-wrapper2">
+                    <div id="popup-inside">
+                        <div id="close">x</div>
+                        <div id="message">
+                            <h3>Coffee Cafe</h3>
+                            <p>This is my favorite coffee cafe</p>
+                            <p>Open hour 11:00~19:00</p>
+                            <div id="carousel2">
+                                <button class="pre-btn" id="prev2"></button>
+                                <img class="main-pic" id="main-pic2" src="imgs/04.jpg" alt="Image 4">
+                                <button class="next-btn" id="next2"></button>
+                                <p id="photo2"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="pin" id="pin3">C</span>
+                <div class="popup-wrapper" id="popup-wrapper3">
+                    <div id="popup-inside">
+                        <div id="close">x</div>
+                        <div id="message">
+                            <h3>Coffee Cafe</h3>
+                            <p>This is my favorite coffee cafe</p>
+                            <p>Open hour 11:00~19:00</p>
+                            <div id="carousel3">
+                                <button class="pre-btn" id="prev3"></button>
+                                <img class="main-pic" id="main-pic3" src="imgs/07.jpg" alt="Image 7">
+                                <button class="next-btn" id="next3"></button>
+                                <p id="photo3"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="cafe-image">
+            <img src="imgs/cafe-footer.jpg" alt="This is inside image of cafe.">
+        </footer>
+        <script src="./js/clickanduser.js"></script>
+        <script src="./js/mao.js"></script>
+    </body>
+
+</html>
