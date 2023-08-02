@@ -168,13 +168,15 @@ body {
     }
 
 
-    .main-pic {
+    .carousel img {
         width: 530px;
         height: 350px;
     }
 
     .pre-btn {
-        top: 0;
+        position: absolute;
+        left: 3rem;
+        bottom: 13rem;
         width: 15px;
         height: 15px;
         border-left: solid 3px #697b91;
@@ -191,6 +193,9 @@ body {
     }
 
     .next-btn {
+        position: absolute;
+        right: 3rem;
+        bottom: 13rem;
         width: 15px;
         height: 15px;
         border-right: solid 3px #697b91;
