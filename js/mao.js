@@ -148,6 +148,7 @@ const carousel3 = new ImageCarousel(list3,
   document.getElementById('photo3'));
 
 
+
 function setupPopup(buttonId, wrapperId, closeId) {
   // {: setupPopupという名前の関数を定義しています。この関数は3つの引数を受け取ります：buttonId、
   // ：buttonId、wrapperId、closeId。それぞれは文字列で、HTML要素のIDを表します
