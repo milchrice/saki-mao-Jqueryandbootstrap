@@ -14,6 +14,24 @@ $(document).ready(function () {
   setInterval(picChange, 5000);
 });
 
+/*
+const img = ["imgs/cafe2.jpg", "imgs/cafe3.jpg", "imgs/cafe4.jpg", "imgs/cafe5.jpg"]; //make array
+const changePic = document.getElementById('changePic'); // 画像要素を取得 //take the method
+let count = 0; //Assignment Operators //give variable
+
+// picChange 関数のみ修正
+function picChange() { //named function //this function, give name
+  // 画像選択
+  changePic.src = img[count]; //pick the image from arr
+
+  count++; //Arithmetic Operators, this incresement the image is changed to next image 
+  if (count === img.length) { //Evaluation / Comparison Operators, Conditional Statement 
+    count = 0; // 最後の画像の後は最初の画像に戻る
+  }
+}
+
+setInterval(picChange, 5000); //images change 5sec
+*/
 
 
 class ImageCarousel {
@@ -128,4 +146,62 @@ const carousel3 = new ImageCarousel(list3,
   document.getElementById('prev3'),
   document.getElementById('next3'),
   document.getElementById('photo3'));
-  */
+
+
+
+function setupPopup(buttonId, wrapperId, closeId) {
+  // {: setupPopupという名前の関数を定義しています。この関数は3つの引数を受け取ります：buttonId、
+  // ：buttonId、wrapperId、closeId。それぞれは文字列で、HTML要素のIDを表します
+  const clickBtn = document.getElementById(buttonId);
+  // clickBtnという変数に、buttonIdで指定されたIDを持つHTML要素（ボタン）を取得して格納しています。
+  const popupWrapper = document.getElementById(wrapperId);
+  // という変数に、wrapperIdで指定されたIDを持つHTML要素（ポップアップのラッパー）を取得して格納しています。
+
+  clickBtn.addEventListener('click', () => {
+    popupWrapper.style.display = 'block';
+  });
+  // : ボタンがクリックされたときに実行するイベントリスナーを設定しています。ボタンがクリックされると、関数が呼び出されます。
+  // ポップアップのラッパー要素のdisplayプロパティを'block'に設定しています。これにより、ポップアップが表示されます
+
+  popupWrapper.addEventListener('click', e => {
+    // ポップアップのラッパー要素に対してクリックイベントリスナーを設定しています。
+    if (e.target.id === wrapperId || e.target.id === closeId) {
+      // イベントが発生した要素のID（e.target.id）をチェックしています。もしイベントがポップアップのラッパー要素をクリックした場合（wrapperId）または閉じるボタンをクリックした場合（closeId）、ポップアップを非表示にする処理が実行されます。
+      popupWrapper.style.display = 'none';
+      // 'none';: ポップアップのラッパー要素のdisplayプロパティを'none'に設定しています。これにより、ポップアップが非表示になります。
+    }
+  });
+}
+
+
+setupPopup('pin1', 'popup-wrapper1', 'close');
+setupPopup('pin2', 'popup-wrapper2', 'close');
+setupPopup('pin3', 'popup-wrapper3', 'close');
+// setupPopup('pin1', 'popup-wrapper1', 'close');: setupPopup関数を呼び出して、IDが'pin1'のボタンをクリックしたときに、IDが'popup-wrapper1'のポップアップを表示し、IDが'close'の要素をクリックするとポップアップを閉じるように設定しています。
+
+// 同様に、setupPopup('pin2', 'popup-wrapper2', 'close');とsetupPopup('pin3', 'popup-wrapper3', 'close');を呼び出して、他のボタンとポップアップに対して同じ処理を行っています。
+
+
+function setupPopup(buttonId, wrapperId, closeId) {
+  const clickBtn = $('#'+buttonId);
+  const popupWrapper = $('#'+wrapperId);
+
+  clickBtn.on('click', () => {
+    popupWrapper.show();
+  });
+
+  popupWrapper.on('click', e => {
+  
+    if ($(e.target).attr('id') === wrapperId || $(e.target).attr('id') === closeId) {
+      console.log('clicked');
+      popupWrapper.hide();
+    }
+  });
+}
+
+$(document).ready(function () {
+  setupPopup('pin1', 'popup-wrapper1', 'close');
+  setupPopup('pin2', 'popup-wrapper2', 'close');
+  setupPopup('pin3', 'popup-wrapper3', 'close');
+});
+*/
