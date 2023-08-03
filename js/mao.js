@@ -1,6 +1,6 @@
-$(document).ready(function () {
+$(document).ready(function () { //DomContentLoaded
   const img = ["imgs/cafe2.jpg", "imgs/cafe3.jpg", "imgs/cafe4.jpg", "imgs/cafe5.jpg"];
-  const changePic = $('#changePic');
+  const changePic = $('#changePic'); //querySelector
   let count = 0;
 
   function picChange() {
@@ -45,11 +45,11 @@ class ImageCarousel {
 
     this.setImage();
 
-    $(document).ready(() => {
+    $(document).ready(() => { //addEventListener, DOMContentLoaded
       this.setImage();
     });
 
-    this.rightArrow.on('click', () => {
+    this.rightArrow.on('click', () => { //onClick
       this.imgN -= 1;
       if (this.imgN < 0) {
         this.imgN = this.list.length - 1;
@@ -68,7 +68,7 @@ class ImageCarousel {
 
   setImage() {
     this.imgElement.attr('src', this.list[this.imgN]);
-    this.pElement.text(`${this.imgN + 1} / ${this.list.length}`);
+    this.pElement.text(`${this.imgN + 1} / ${this.list.length}`);//textContent
   }
 }
 
@@ -82,6 +82,8 @@ $(document).ready(function () {
   const list3 = ['imgs/07.jpg', 'imgs/08.jpg', 'imgs/09.jpg'];
   const carousel3 = new ImageCarousel(list3, $('#main-pic3'), $('#next3'), $('#prev3'), $('#photo3'));
 });
+
+//$(selector).action()
 
 /*
 // JavaScript
